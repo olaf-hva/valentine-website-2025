@@ -1,5 +1,5 @@
 const CONFIG = {
-    valentineName: "路映彤",
+    valentineName: "盧映彤",
     pageTitle: "Mimi Will You Be My Valentine? 💗🥺",
 
     floatingEmojis: {
