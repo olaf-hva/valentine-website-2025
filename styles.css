@@ -44,7 +44,8 @@ body {
     z-index: 1;
 }
 
-.heart, .bear {
+.heart,
+.bear {
     position: absolute;
     font-size: 2rem;
     animation: float var(--float-duration) linear infinite;
@@ -54,6 +55,7 @@ body {
     0% {
         transform: translateY(100vh) translateX(0);
     }
+
     100% {
         transform: translateY(-100px) translateX(var(--float-distance));
     }
@@ -93,7 +95,7 @@ body {
     margin-top: 0;
     opacity: 0.2;
     transition: opacity 0.3s;
-    transform: scale(0.7);
+    transform: scale(1.2);
     z-index: 2;
     animation: subtle-hint 2s infinite alternate;
     animation-delay: 5s;
@@ -232,6 +234,7 @@ body {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.2);
     }
@@ -247,15 +250,18 @@ body {
     0% {
         transform: scale(0);
     }
+
     50% {
         transform: scale(var(--heart-explosion-size));
     }
+
     100% {
         transform: scale(1);
     }
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: Arial, sans-serif;
     font-weight: 700;
 }
@@ -289,8 +295,13 @@ h2 {
 }
 
 @keyframes subtle-hint {
-    0% { opacity: 0.2; }
-    100% { opacity: 0.3; }
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
 }
 
 .music-controls {
@@ -309,10 +320,10 @@ h2 {
     cursor: pointer;
     font-size: 16px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .music-btn:hover {
     transform: scale(1.05);
     background: var(--secondary-color);
-} 
+}

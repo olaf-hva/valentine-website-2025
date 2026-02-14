@@ -59,19 +59,19 @@ window.addEventListener('DOMContentLoaded', () => {
     validateConfig();
 
     // Set texts from config
-    document.getElementById('valentineTitle').textContent = `${config.valentineName}, my love...`;
-    
+    document.getElementById('valentineTitle').textContent = `${config.valentineName}，我的寶貝`;
+
     // Set first question texts
     document.getElementById('question1Text').textContent = config.questions.first.text;
     document.getElementById('yesBtn1').textContent = config.questions.first.yesBtn;
     document.getElementById('noBtn1').textContent = config.questions.first.noBtn;
     document.getElementById('secretAnswerBtn').textContent = config.questions.first.secretAnswer;
-    
+
     // Set second question texts
     document.getElementById('question2Text').textContent = config.questions.second.text;
     document.getElementById('startText').textContent = config.questions.second.startText;
     document.getElementById('nextBtn').textContent = config.questions.second.nextBtn;
-    
+
     // Set third question texts
     document.getElementById('question3Text').textContent = config.questions.third.text;
     document.getElementById('yesBtn3').textContent = config.questions.third.yesBtn;
@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Create floating hearts and bears
 function createFloatingElements() {
     const container = document.querySelector('.floating-elements');
-    
+
     // Create hearts
     config.floatingEmojis.hearts.forEach(heart => {
         const div = document.createElement('div');
@@ -143,14 +143,14 @@ function setInitialPosition() {
 loveMeter.addEventListener('input', () => {
     const value = parseInt(loveMeter.value);
     loveValue.textContent = value;
-    
+
     if (value > 100) {
         extraLove.classList.remove('hidden');
         const overflowPercentage = (value - 100) / 9900;
         const extraWidth = overflowPercentage * window.innerWidth * 0.8;
         loveMeter.style.width = `calc(100% + ${extraWidth}px)`;
         loveMeter.style.transition = 'width 0.3s';
-        
+
         // Show different messages based on the value
         if (value >= 5000) {
             extraLove.classList.add('super-love');
@@ -178,12 +178,12 @@ function celebrate() {
     document.querySelectorAll('.question-section').forEach(q => q.classList.add('hidden'));
     const celebration = document.getElementById('celebration');
     celebration.classList.remove('hidden');
-    
+
     // Set celebration messages
     document.getElementById('celebrationTitle').textContent = config.celebration.title;
     document.getElementById('celebrationMessage').textContent = config.celebration.message;
     document.getElementById('celebrationEmojis').textContent = config.celebration.emojis;
-    
+
     // Create heart explosion effect
     createHeartExplosion();
 }
