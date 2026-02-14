@@ -36,7 +36,7 @@ const CONFIG = {
 
     // Messages that appear after they say "Yes!"
     celebration: {
-        title: "Yeeyyy mimiiiii, thank you🥹🥹 im the happest guy in the universe 💝❤️‍🔥💗💗",
+        title: "Yeeyyy mimiiiii, thank you🥹🥹 you made me the happiest guy in the universe 💝❤️‍🔥💗💗",
         message: "Mimi I LOVE YOUUUUU!!",
         emojis: "💗💗💗💖💝❤️❤️‍🔥💞"  // These will bounce around
     },
